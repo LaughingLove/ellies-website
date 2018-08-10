@@ -1,0 +1,153 @@
+$grey: #333;
+$dark-grey: #292929;
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $grey;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+// Particle JS
+
+#particle-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    //background-position: 50%, 50%;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // So you can interact with the particles AND the foreground elements
+    pointer-events: none;
+    a, h1, p, footer {
+        pointer-events: all;
+    }
+}
+
+// Main wrapper
+
+.main {
+    margin: 1em;
+    padding: 1em;
+    background: $dark-grey;
+    background-image: radial-gradient(center center, circle farthest-corner, #2d2d2d, $dark-grey);
+    background-image: -moz-radial-gradient(center center, circle farthest-corner, #2d2d2d, $dark-grey);
+    border-radius: 5%;
+    height: 90%;
+    h1, p, i, ul{
+        animation: fadeAndScale 1s cubic-bezier(.3,-0.59,.64,1.65);
+        transform-origin: center bottom;
+    }
+    @keyframes fadeAndScale {
+        from {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+        to {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+}
+
+// Who Am I
+
+.who-am-i {
+    padding: 1em;
+}
+
+// Nav and social properties
+
+.nav, .social {
+    ul {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            margin-right: .5em;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+// Nav
+
+.nav {
+    font-size: 1.3em;
+    ul {
+        text-align: center;
+        padding: .5em;
+        margin: 0;
+    }
+    a {
+        border-bottom: 0.1em solid white;
+    }
+}
+
+// Social
+
+.social {
+    font-size: 1.3em;
+    padding: 1.5em;
+    ul {
+        margin: 0;
+    }
+    i {
+        padding: 0.3em;
+    }
+    a:hover {
+        i {
+            background: grey;
+            color: white;
+            border-radius: 3%;
+        }
+    }
+}
+
+// Footer
+
+.footer {
+    a {
+        text-decoration: none;
+        color: white;
+        border-bottom: 0.1em solid white;
+    }
+}
+
+// Global Property
+
+a:hover {
+    color: grey;
+    border-bottom: 0.1em solid grey;
+}
+
+// Media Queries
+
+@media screen and (max-height: 580px) {
+    .main {
+        height: 30em;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .main {
+        height: 30em;
+    }
+    .social {
+        font-size: 1.5em;
+    }
+}
