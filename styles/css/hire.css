@@ -1,47 +1,39 @@
 html, body {
-  width: 100%;
-  height: 100%; }
+  margin: 0;
+  min-height: 100%; }
 
 body {
-  margin: 0;
-  padding: 0;
   background: #333;
   color: white;
   font-family: 'Raleway', sans-serif;
   text-align: center; }
 
+a {
+  text-decoration: none;
+  color: white;
+  border-bottom: .1em solid white; }
+
+a:hover {
+  color: grey;
+  border-bottom: .1em solid grey; }
+
 #particle-js {
   position: fixed;
-  width: 100%;
-  height: 100%; }
+  height: 100%;
+  margin: 0; }
 
 .overlay {
   position: relative;
   width: 100%;
   height: 100%;
   pointer-events: none; }
-  .overlay a, .overlay h1, .overlay p, .overlay footer, .overlay .item {
+  .overlay a, .overlay h1, .overlay p, .overlay .item, .overlay ul, .overlay h2, .overlay h3, .overlay h4 {
     pointer-events: all; }
 
-#thanatos, #oinky {
-  width: 100%; }
-
-#thanatos:hover, #oinky:hover {
-  border: 0.3em solid #1c1c1c; }
-
-a {
-  text-decoration: none;
-  color: white;
-  border-bottom: 0.1em solid white; }
-
-a:hover {
-  color: grey;
-  border-bottom: 0.1em solid grey; }
-
 .header {
-  padding: 1em;
-  background: #292929; }
-  .header h1, .header p, .header div {
+  background: #292929;
+  padding: 1em; }
+  .header h1, .header p, .header div, .header h2, .header h3, .header h4 {
     animation: fadeAndScale 1s cubic-bezier(0.3, -0.59, 0.64, 1.65);
     transform-origin: center bottom; }
 
@@ -74,42 +66,49 @@ a:hover {
   .nav #current-page:hover {
     color: white; }
 
-.main {
-  padding: 1em; }
-
 .item {
   background: #292929;
-  border-radius: 3%;
-  padding: 1em;
-  margin-bottom: 1em;
-  position: relative; }
+  position: relative;
+  padding: 1rem;
+  margin: 2em;
+  border-radius: 4%; }
 
 .item:hover {
   top: -5px;
   box-shadow: 5px 10px #1c1c1c; }
 
+.terms-contact {
+  padding: 1.5em; }
+
 .footer {
-  padding: 0.5em; }
+  padding: 1em; }
   .footer ul {
     list-style-type: none;
-    font-size: 1.3em; }
+    font-size: 1.2em; }
     .footer ul li {
       display: inline-block;
       margin-right: .5em;
       text-align: center; }
+    .footer ul a {
+      border: none; }
   .footer a {
     text-decoration: none;
     color: white;
     border: none;
-    text-align: center; }
+    text-align: center;
+    border-bottom: 0.1em solid white; }
   .footer a:hover {
     color: grey;
     border-bottom: 0.1em solid grey; }
 
-@media screen and (min-width: 900px) {
-  #thanatos, #oinky {
-    width: 100%; }
+@media screen and (min-width: 700px) {
   .items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1em; } }
+    grid-template-columns: 1fr 1fr; }
+    .items .item {
+      margin: 1em;
+      padding: 1em; } }
+
+@media screen and (min-width: 1100px) {
+  .items {
+    grid-template-columns: 1fr 1fr 1fr 1fr; } }
