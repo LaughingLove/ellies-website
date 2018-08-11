@@ -1,0 +1,111 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #333;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-align: center; }
+
+#particle-js {
+  position: fixed;
+  width: 100%;
+  height: 100%; }
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; }
+  .overlay a, .overlay h1, .overlay p, .overlay footer, .overlay .item {
+    pointer-events: all; }
+
+a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 0.1em solid white; }
+
+a:hover {
+  color: grey;
+  border-bottom: 0.1em solid grey; }
+
+.header {
+  background: #292929;
+  padding: 1em; }
+  .header h1, .header p, .header div {
+    animation: fadeAndScale 1s cubic-bezier(0.3, -0.59, 0.64, 1.65);
+    transform-origin: center bottom; }
+
+@keyframes fadeAndScale {
+  from {
+    opacity: 0;
+    transform: scale3d(0.75, 0.75, 1); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+
+.nav {
+  font-size: 1.2em; }
+  .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .nav ul li {
+      display: inline-block;
+      padding: .5em; }
+  .nav a {
+    text-decoration: none;
+    color: white; }
+  .nav a:hover {
+    padding: .2em;
+    background: grey; }
+  .nav #current-page {
+    color: grey;
+    border-bottom: 0.1em solid grey; }
+  .nav #current-page:hover {
+    color: white; }
+
+.tos {
+  background: #292929;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 3%; }
+
+.tos div {
+  border: 0.1em solid #333;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 3%; }
+
+.footer {
+  padding: 1em; }
+  .footer ul {
+    list-style-type: none;
+    font-size: 1.2em; }
+    .footer ul li {
+      display: inline-block;
+      margin-right: .5em;
+      text-align: center; }
+    .footer ul a {
+      border: none; }
+  .footer a {
+    text-decoration: none;
+    color: white;
+    border: none;
+    text-align: center;
+    border-bottom: 0.1em solid white; }
+  .footer a:hover {
+    color: grey;
+    border-bottom: 0.1em solid grey; }
+
+@media screen and (min-width: 700px) {
+  .tos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    margin: 2em; } }
